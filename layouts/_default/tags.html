@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="archive-tags">
+    <h1>Tags</h1>
+
+    <div class="tags-cloud">
+        {{- range .Site.Taxonomies.tags }}
+        <div class="tag-item">
+            <a href="{{ .Page.RelPermalink }}" class="tag">
+                {{ .Page.Title }}
+            </a> <span class="tag-count">({{ .Count }})</span>
+        </div>
+        {{- end }}
+    </div>
+</div>
+{{ end }}

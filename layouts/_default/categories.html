@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="archive-categories">
+    <h1>Categories</h1>
+    
+    <div class="categories-list">
+        {{- range .Site.Taxonomies.categories }}
+        <div class="category-item">
+            <a href="{{ .Page.RelPermalink }}" class="category">
+                {{ .Page.Title }}<span class="category-count">({{ .Count }})</span>
+            </a>
+        </div>
+        {{- end }}
+    </div>
+</div>
+{{ end }} 
